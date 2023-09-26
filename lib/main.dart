@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Profile(),
+    home: const Profile(),
     theme: ThemeData(fontFamily: 'Poppins'),
   ));
 }
 
 class Profile extends StatefulWidget {
+  const Profile({super.key});
+
   @override
   _ProfileState createState() => _ProfileState();
 }
 
 class _ProfileState extends State<Profile> {
+
+  Color textColor =  Color.fromARGB(255, 107, 107, 107);
+
   Color ButtonColor1 = Colors.white;
   Color ButtonColor2 = Colors.white;
   Color ButtonColor3 = Colors.white;
@@ -24,7 +28,7 @@ class _ProfileState extends State<Profile> {
   Color TextColor2 = Colors.blue;
   Color TextColor3 = Colors.blue;
 
-  Color myCustomColor = Color.fromRGBO(210, 237, 252, 1.0);
+  Color myCustomColor = const Color.fromRGBO(210, 237, 252, 1.0);
 
   void changeButtonColor(int p) {
     setState(() {
@@ -57,9 +61,9 @@ class _ProfileState extends State<Profile> {
       body: Column(
         children: [
           Container(
-            height: 250.0,
-            margin: EdgeInsets.all(16.0),
-            padding: EdgeInsets.all(16.0),
+            height: 240.0,
+            margin: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
@@ -70,8 +74,8 @@ class _ProfileState extends State<Profile> {
                 Expanded(
                   flex: 3,
                   child: Container(
-                    margin: EdgeInsets.all(8.0),
-                    padding: EdgeInsets.all(8.0),
+                    margin: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
@@ -84,6 +88,7 @@ class _ProfileState extends State<Profile> {
                           style: TextStyle(
                             fontSize: 24.0,
                             fontWeight: FontWeight.bold,
+                            color: textColor,
                           ),
                         ),
                         SizedBox(height: 12.0),
@@ -112,14 +117,18 @@ class _ProfileState extends State<Profile> {
                 Expanded(
                   flex: 2,
                   child: Container(
-                    margin: EdgeInsets.all(8.0),
-                    padding: EdgeInsets.all(8.0),
+                    margin: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    child: Image.asset(
-                      'assets/pic.jpeg',
-                      fit: BoxFit.cover,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(
+                          10.0),
+                      child: Image.asset(
+                        'assets/pic.jpeg',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
@@ -127,8 +136,8 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(16.0),
-            padding: EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(8.0),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10.0),
@@ -138,55 +147,55 @@ class _ProfileState extends State<Profile> {
               children: [
                 ElevatedButton(
                   onPressed: () => changeButtonColor(1),
-                  child: Text(
-                    'About',
-                    style: TextStyle(color: TextColor1),
-                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: ButtonColor1,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
+                  child: Text(
+                    'About',
+                    style: TextStyle(color: TextColor1),
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: () => changeButtonColor(2),
-                  child: Text(
-                    'Work',
-                    style: TextStyle(color: TextColor2),
-                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: ButtonColor2,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
+                  child: Text(
+                    'Work',
+                    style: TextStyle(color: TextColor2),
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: () => changeButtonColor(3),
-                  child: Text(
-                    'Activity',
-                    style: TextStyle(color: TextColor3),
-                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: ButtonColor3,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
+                  child: Text(
+                    'Activity',
+                    style: TextStyle(color: TextColor3),
+                  ),
                 ),
               ],
             ),
           ),
           Container(
-            margin: EdgeInsets.all(16.0),
-            padding: EdgeInsets.all(16.0),
+            margin: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10.0),
             ),
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -207,114 +216,108 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           Container(
-  margin: EdgeInsets.all(16.0),
-  padding: EdgeInsets.all(16.0),
-  decoration: BoxDecoration(
-    color: Colors.white,
-    borderRadius: BorderRadius.circular(10.0),
-  ),
-  child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Text(
-        'ON THE WEB',
-        style: TextStyle(
-          fontSize: 18.0,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      SizedBox(height: 16.0),
-
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          CircleAvatar(
-            backgroundColor: Colors.blue,
-            radius: 24.0,
-            child: Icon(
-              FontAwesomeIcons.github,
+            margin: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
               color: Colors.white,
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'ON THE WEB',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 16.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.blue,
+                      radius: 24.0,
+                      child: Icon(
+                        FontAwesomeIcons.github,
+                        color: Colors.white,
+                      ),
+                    ),
+                    CircleAvatar(
+                      backgroundColor: Colors.blue,
+                      radius: 24.0,
+                      child: Icon(
+                        FontAwesomeIcons.twitter,
+                        color: Colors.white,
+                      ),
+                    ),
+                    CircleAvatar(
+                      backgroundColor: Colors.blue,
+                      radius: 24.0,
+                      child: Icon(
+                        FontAwesomeIcons.facebook,
+                        color: Colors.white,
+                      ),
+                    ),
+                    CircleAvatar(
+                      backgroundColor: Colors.blue,
+                      radius: 24.0,
+                      child: Icon(
+                        FontAwesomeIcons.instagram,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
-          CircleAvatar(
-            backgroundColor: Colors.blue,
-            radius: 24.0,
-            child: Icon(
-              FontAwesomeIcons.twitter,
+          Container(
+            margin: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
               color: Colors.white,
+              borderRadius: BorderRadius.circular(10.0),
             ),
-          ),
-          CircleAvatar(
-            backgroundColor: Colors.blue,
-            radius: 24.0,
-            child: Icon(
-              FontAwesomeIcons.facebook,
-              color: Colors.white,
+            child: const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      'WEBSITE',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 8.0),
+                    Text(
+                      'www.portfolio.com',
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15.0),
+                Row(
+                  children: [
+                    Text(
+                      'PHONE',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 8.0),
+                    Text(
+                      '03116385120',
+                    ),
+                  ],
+                ),
+              ],
             ),
-          ),
-          CircleAvatar(
-            backgroundColor: Colors.blue,
-            radius: 24.0,
-            child: Icon(
-              FontAwesomeIcons.instagram,
-              color: Colors.white,
-            ),
-          ),
-        ],
-      ),
-    ],
-  ),
-),
-Container(
-  margin: EdgeInsets.all(16.0),
-  padding: EdgeInsets.all(16.0),
-  decoration: BoxDecoration(
-    color: Colors.white,
-    borderRadius: BorderRadius.circular(10.0),
-  ),
-  child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Row(
-        children: [
-          Text(
-            'WEBSITE',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(width: 8.0),
-          Text(
-            'www.portfolio.com',
-            style: TextStyle(
-              
-              decoration: TextDecoration.underline,
-            ),
-          ),
-        ],
-      ),
-      SizedBox(height: 15.0),
-      Row(
-        children: [
-          Text(
-            'PHONE',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(width: 8.0),
-          Text(
-            '03116385120',
-          ),
-        ],
-      ),
-    ],
-  ),
-)
-
-
-          
-          
+          )
         ],
       ),
     );
