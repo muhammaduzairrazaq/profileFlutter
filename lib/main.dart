@@ -19,6 +19,7 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
 
   Color textColor =  Color.fromARGB(255, 107, 107, 107);
+  Color back = Colors.white;
 
   Color ButtonColor1 = Colors.white;
   Color ButtonColor2 = Colors.white;
