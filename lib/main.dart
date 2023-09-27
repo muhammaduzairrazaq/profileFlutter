@@ -547,136 +547,228 @@ class _ProfileState extends State<Profile> {
               ],
             ),
           ),
-          
-
+        
           Padding(
-              padding: EdgeInsets.only(top: 10.0),
-              child: Row(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(12.0), // Add padding
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 60.0, // Square container
-                          height: 60.0, // Square container
-                          decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.circular(10.0), // Rounded corners
-                          ),
-                          
-                          child: Image.asset(
-                              'assets/travel_image.jpeg',
-                              
-                              
-                              ),
-                            // Replace with your image asset
+            padding: EdgeInsets.only(top: 10.0),
+            child: Row(
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 1,
+                child:Container(
+                  padding: EdgeInsets.all(12.0), // Add padding
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 60.0, // Square container
+                        height: 60.0, // Square container
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the container
                         ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the image
+                          child: Image.asset(
+                            'assets/travel_image.jpeg',
+                            fit: BoxFit
+                                .cover, // Ensure the image fully covers the container
+                          ),
+                        ),
+                      ),
 
-                        SizedBox(height: 8.0), // Add space below image
-                        Text('Travel'), // Heading
-                      ],
-                    ),
+                      SizedBox(height: 8.0), // Add space below image
+                      Text('Travel'), // Heading
+                    ],
                   ),
-                  Container(
-                    padding: EdgeInsets.all(10.0), // Add padding
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 60.0, // Square container
-                          height: 60.0, // Square container
-                          decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.circular(10.0), // Rounded corners
-                          ),
-                          child: Image.asset(
-                              'assets/food_image.jpeg'), // Replace with your image asset
+                ),
+                ),
+                Expanded(
+                  flex: 1,
+
+                child: Container(
+                  padding: EdgeInsets.all(9.0), // Add padding
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 60.0, // Square container
+                        height: 60.0, // Square container
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the container
                         ),
-                        SizedBox(height: 8.0), // Add space below image
-                        Text('Foods'), // Heading
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(10.0), // Add padding
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 60.0, // Square container
-                          height: 60.0, // Square container
-                          decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.circular(10.0), // Rounded corners
-                          ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the image
                           child: Image.asset(
-                              'assets/mixtape_image.jpeg'), // Replace with your image asset
-                        ),
-                        SizedBox(height: 8.0), // Add space below image
-                        Text('Mixtapes'), // Heading
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(10.0), // Add padding
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 60.0, // Square container
-                          height: 60.0, // Square container
-                          decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.circular(10.0), // Rounded corners
+                            'assets/food_image.jpeg',
+                            fit: BoxFit
+                                .cover, // Ensure the image fully covers the container
                           ),
-                          child: Image.asset(
-                              'assets/quotes_image.jpeg'), // Replace with your image asset
                         ),
-                        SizedBox(height: 8.0), // Add space below image
-                        Text('Quotes'), // Heading
-                      ],
-                    ),
+                      ),
+
+                      SizedBox(height: 8.0), // Add space below image
+                      Text('Food'), // Heading
+                    ],
                   ),
-                  Container(
-                    padding: EdgeInsets.all(10.0), // Add padding
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 60.0, // Square container
-                          height: 60.0, // Square container
-                          decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.circular(10.0), // Rounded corners
+                ),
+                ),
+                Expanded (
+                  flex: 1,
+                child: Container(
+                  padding: EdgeInsets.all(9.0), // Add padding
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 60.0, // Square container
+                        height: 60.0, // Square container
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the container
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the image
+                          child: Image.asset(
+                            'assets/mixtape_image.jpeg',
+                            fit: BoxFit
+                                .cover, // Ensure the image fully covers the container
                           ),
-                          child: Image.asset(
-                              'assets/arts_image.jpeg'), // Replace with your image asset
                         ),
-                        SizedBox(height: 8.0), // Add space below image
-                        Text('Arts'), // Heading
-                      ],
-                    ),
+                      ),
+
+                      SizedBox(height: 8.0), // Add space below image
+                      Text('Mixtapes'), // Heading
+                    ],
                   ),
-                  Container(
-                    padding: EdgeInsets.all(10.0), // Add padding
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 60.0, // Square container
-                          height: 60.0, // Square container
-                          decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.circular(10.0), // Rounded corners
+                ),
+                ),
+                Expanded(
+                  flex: 1,
+                child:Container(
+                  padding: EdgeInsets.all(9.0), // Add padding
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 60.0, // Square container
+                        height: 60.0, // Square container
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the container
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the image
+                          child: Image.asset(
+                            'assets/quotes_image.jpeg',
+                            fit: BoxFit
+                                .cover, // Ensure the image fully covers the container
                           ),
-                          child: Image.asset(
-                              'assets/speed_image.jpeg'), // Replace with your image asset
                         ),
-                        SizedBox(height: 8.0), // Add space below image
-                        Text('Speed'), // Heading
-                      ],
-                    ),
+                      ),
+
+                      SizedBox(height: 8.0), // Add space below image
+                      Text('Quotes'), // Heading
+                    ],
                   ),
-                ],
-              ),
-              ),
+                ),
+                ),
+                Expanded(
+                  flex: 1,
+                child:Container(
+                  padding: EdgeInsets.all(9.0), // Add padding
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 60.0, // Square container
+                        height: 60.0, // Square container
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the container
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the image
+                          child: Image.asset(
+                            'assets/arts_image.jpeg',
+                            fit: BoxFit
+                                .cover, // Ensure the image fully covers the container
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(height: 8.0), // Add space below image
+                      Text('Arts'), // Heading
+                    ],
+                  ),
+                ),
+                ),
+                Expanded(
+                  flex: 1,
+               child: Container(
+                  padding: EdgeInsets.all(12.0), // Add padding
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 60.0, // Square container
+                        height: 60.0, // Square container
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the container
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(
+                              10.0), // Rounded corners for the image
+                          child: Image.asset(
+                            'assets/speed_image.jpeg',
+                            fit: BoxFit
+                                .cover, // Ensure the image fully covers the container
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(height: 8.0), // Add space below image
+                      Text('Speed'), // Heading
+                    ],
+                  ),
+                ),
+                ),
+              ],
+            ),
+          ),
+   SizedBox(height: 8.0), 
+          Divider(
+  color: Color.fromARGB(255, 102, 101, 101),    // Set the color of the line
+  thickness: 1.0,         // Set the thickness of the line
+  indent: 16.0,           // Set the left indent of the line
+  endIndent: 16.0,        // Set the right indent of the line
+),
+
+Container(
+  child: GridView.count(
+    crossAxisCount: 3,
+    physics: NeverScrollableScrollPhysics(),
+    shrinkWrap: true,
+    children: List.generate(
+      6,
+      (index) => Container(
+        margin: EdgeInsets.all(8.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          border: Border.all(color: Colors.black),
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(10.0),
+          child: Image.asset(
+            'assets/singer.jpeg', // Replace with your image asset path
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+    ),
+  ),
+)
 
           // Add other widgets below if needed
         ],
