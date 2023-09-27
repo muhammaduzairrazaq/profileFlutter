@@ -65,6 +65,8 @@ In this project I have created a Profile
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 - The Live Demo link will be available soon!
+- ![Screenshot from 2023-09-27 09-58-19](https://github.com/muhammaduzairrazaq/profileFlutter/assets/138608690/d73669e3-5576-4750-92ef-eca19a5c2780)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -122,7 +124,7 @@ GitHub Pages
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Addin more pages]**
+- [ ] **[Adding more pages]**
 - [ ] **[Adding functionality to buttons]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -130,8 +132,6 @@ GitHub Pages
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [https://github.com/muhammaduzairrazaq/portfolio.com](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
