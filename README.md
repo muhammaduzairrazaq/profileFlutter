@@ -65,7 +65,7 @@ In this project I have created a Profile
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 - The Live Demo link will be available soon!
-- ![Screenshot from 2023-09-27 09-58-19](https://github.com/muhammaduzairrazaq/profileFlutter/assets/138608690/d73669e3-5576-4750-92ef-eca19a5c2780)
+- ![Screenshot from 2023-09-27 09-58-19](https://github.com/muhammaduzairrazaq/profileFlutter/assets/138608690/793baf58-50ba-48a1-88ad-76c81341b09b)
 - ![profile 2](image.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
